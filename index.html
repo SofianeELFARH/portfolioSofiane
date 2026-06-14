@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sofiane ELFARH – Futur Analyste Sportif</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #0F2942;
+    --accent: #1D9E75;
+    --accent-light: #E1F5EE;
+    --text: #1a1a1a;
+    --muted: #5F5E5A;
+    --border: #E0DED6;
+    --bg: #F8F7F4;
+    --white: #ffffff;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--navy);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 13.5px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .nav-links a:hover {
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+
+  /* HERO */
+  #accueil {
+    min-height: calc(100vh - 58px);
+    display: flex;
+    align-items: center;
+    padding: 3rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 4rem;
+  }
+
+  /* LEFT COLUMN */
+  .left-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+    width: 260px;
+  }
+
+  .photo-wrapper {
+    width: 220px;
+    height: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid var(--accent);
+    background: var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .contact-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .contact-card .contact-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  .contact-row .icon {
+    width: 28px;
+    height: 28px;
+    background: var(--accent-light);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-row .icon svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--accent);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .contact-row a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .contact-row a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .cv-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--navy);
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.15s;
+    margin-top: 0.3rem;
+  }
+
+  .cv-btn:hover { background: var(--accent); }
+
+  .cv-btn svg {
+    width: 15px;
+    height: 15px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* RIGHT COLUMN */
+  .right-col {
+    flex: 1;
+  }
+
+  .tag {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.8rem;
+  }
+
+  .divider {
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-bottom: 1.6rem;
+  }
+
+  .bio {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #3a3a3a;
+  }
+
+  .bio p + p {
+    margin-top: 1rem;
+  }
+
+  /* SECTIONS PLACEHOLDER */
+  section:not(#accueil) {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--navy);
+    margin-bottom: 2rem;
+  }
+
+  .placeholder-box {
+    background: var(--white);
+    border: 1.5px dashed var(--border);
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* FORMATIONS ACCORDÉON */
+  .formation-bloc {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .formation-titre {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+
+  .formation-item {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    background: var(--white);
+  }
+
+  .formation-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    text-align: left;
+  }
+
+  .formation-btn:hover {
+    background: var(--accent-light);
+  }
+
+  .formation-nom {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .formation-periode {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  .chevron {
+    width: 14px;
+    height: 14px;
+    stroke: var(--muted);
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  .formation-btn.open .chevron {
+    transform: rotate(180deg);
+  }
+
+  .formation-detail {
+    display: none;
+    padding: 0 12px 12px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #3a3a3a;
+  }
+
+  .formation-detail p + p {
+    margin-top: 0.6rem;
+  }
+
+  .formation-detail.visible {
+    display: block;
+  }
+
+  /* FRISE CHRONOLOGIQUE */
+  .frise-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .frise-etape {
+    display: grid;
+    grid-template-columns: 130px 36px 1fr;
+    align-items: start;
+    gap: 0 0;
+  }
+
+  .frise-annee-bloc {
+    padding-top: 14px;
+    text-align: right;
+    padding-right: 16px;
+  }
+
+  .frise-annee {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .frise-ligne-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .frise-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--border);
+    border: 3px solid var(--white);
+    box-shadow: 0 0 0 2px var(--border);
+    margin-top: 16px;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+
+  .frise-dot.accent {
+    background: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+
+  .frise-dot.navy {
+    background: var(--navy);
+    box-shadow: 0 0 0 2px var(--navy);
+  }
+
+  .frise-trait {
+    width: 2px;
+    flex: 1;
+    min-height: 40px;
+    background: var(--border);
+    margin-top: 4px;
+  }
+
+  .frise-trait.hidden {
+    background: transparent;
+  }
+
+  .frise-card {
+    margin-left: 16px;
+    margin-bottom: 24px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+  }
+
+  .frise-card.highlight {
+    border-color: var(--accent);
+    border-width: 1.5px;
+  }
+
+  .frise-card.navy-card {
+    background: var(--navy);
+    border-color: var(--navy);
+  }
+
+  .frise-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--accent-light);
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .frise-badge.accent {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .frise-badge.navy {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+  }
+
+  .frise-card-titre {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+
+  .navy-card .frise-card-titre {
+    color: #fff;
+  }
+
+  .frise-card-periode {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 0.7rem;
+  }
+
+  .navy-card .frise-card-periode {
+    color: rgba(255,255,255,0.6);
+  }
+
+  .frise-alternance {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+    background: var(--accent-light);
+    padding: 6px 10px;
+    border-radius: 8px;
+    margin-bottom: 0.7rem;
+  }
+
+  .frise-alternance svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--accent);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+  }
+
+  .frise-alternance.dark {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+  }
+
+  .frise-alternance.dark svg {
+    stroke: #fff;
+  }
+
+  .frise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .ftag {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+
+  .ftag.dark {
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.8);
+    border-color: rgba(255,255,255,0.2);
+  }
+
+  /* COMPÉTENCES */
+  .section-intro {
+    font-size: 14.5px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 620px;
+    margin-bottom: 2.5rem;
+  }
+
+  .comp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .comp-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .comp-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.9rem 1.2rem;
+  }
+
+  .comp-header.traiter  { background: #E1F5EE; }
+  .comp-header.analyser { background: #E6F1FB; }
+  .comp-header.valoriser{ background: #FAEEDA; }
+  .comp-header.modeliser{ background: #EEEDFE; }
+
+  .comp-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .comp-header.traiter  .comp-icon { background: #1D9E75; }
+  .comp-header.analyser .comp-icon { background: #185FA5; }
+  .comp-header.valoriser .comp-icon { background: #BA7517; }
+  .comp-header.modeliser .comp-icon { background: #534AB7; }
+
+  .comp-icon svg {
+    width: 16px;
+    height: 16px;
+    stroke: #fff;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .comp-titre {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .comp-header.traiter  .comp-titre { color: #0F6E56; }
+  .comp-header.analyser .comp-titre { color: #185FA5; }
+  .comp-header.valoriser .comp-titre { color: #854F0B; }
+  .comp-header.modeliser .comp-titre { color: #3C3489; }
+
+  .comp-bulles {
+    padding: 1rem 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .bulle {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    line-height: 1.3;
+  }
+
+  /* CAROUSEL PROJETS */
+  .carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .carousel-arrow {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    background: var(--white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    z-index: 2;
+  }
+
+  .carousel-arrow:hover {
+    background: var(--accent-light);
+    border-color: var(--accent);
+  }
+
+  .carousel-arrow svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--navy);
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .carousel-arrow:hover svg { stroke: var(--accent); }
+
+  .carousel-track {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem 0;
+    min-height: 380px;
+  }
+
+  .carousel-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+
+  .carousel-item {
+    flex-shrink: 0;
+    width: 260px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    opacity: 0.35;
+    filter: blur(1.5px);
+    transform: scale(0.88);
+  }
+
+  .carousel-item.active {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+    border-color: var(--accent);
+    border-width: 1.5px;
+    box-shadow: 0 8px 32px rgba(29,158,117,0.12);
+  }
+
+  .carousel-item.side {
+    opacity: 0.5;
+    filter: blur(0.8px);
+    transform: scale(0.93);
+  }
+
+  .projet-img-wrapper {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    background: var(--accent-light);
+  }
+
+  .projet-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .projet-img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--accent);
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .projet-img-placeholder { font-size: 13px; }
+
+  .projet-info {
+    padding: 1rem;
+  }
+
+  .projet-titre {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+
+  .projet-clic {
+    font-size: 11.5px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0;
+    transition: opacity 0.2s;
+  }
+
+  .projet-desc {
+    display: none;
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: #3a3a3a;
+    margin-top: 0.6rem;
+    border-top: 1px solid var(--border);
+    padding-top: 0.6rem;
+  }
+
+  .projet-desc p {
+    white-space: pre-line;
+  }
+
+  .carousel-item.open .projet-desc { display: block; }
+  .carousel-item.open .projet-clic { opacity: 0.5; }
+
+  .projet-pdf {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 0.7rem;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    padding: 5px 12px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .projet-pdf:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .projet-pdf svg {
+    width: 13px;
+    height: 13px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 1.2rem;
+  }
+
+  .cdot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--border);
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    padding: 0;
+  }
+
+  .cdot.active {
+    background: var(--accent);
+    transform: scale(1.2);
+  }
+
+  /* DESCRIPTIONS DANS LA FRISE (EXPÉRIENCES) */
+  .frise-card-desc {
+    font-size: 13px;
+    line-height: 1.75;
+    color: #3a3a3a;
+    margin-bottom: 0.9rem;
+  }
+
+  .frise-card-desc p + p {
+    margin-top: 0.7rem;
+  }
+
+  .navy-card .frise-card-desc {
+    color: rgba(255,255,255,0.78);
+  }
+
+  /* OBJECTIFS */
+  .obj-roadmap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .obj-card {
+    position: relative;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .obj-card.moyen .obj-node {
+    background: #E6F1FB;
+    color: #185FA5;
+  }
+
+  .obj-card.moyen .obj-badge {
+    color: #185FA5;
+  }
+
+  .obj-card.long {
+    background: var(--navy);
+    border-color: var(--navy);
+  }
+
+  .obj-card.long .obj-node {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+  }
+
+  .obj-card.long .obj-badge {
+    color: rgba(255,255,255,0.65);
+  }
+
+  .obj-card.long .obj-titre {
+    color: #fff;
+  }
+
+  .obj-card.long .obj-text {
+    color: rgba(255,255,255,0.8);
+  }
+
+  .obj-node {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .obj-node svg {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .obj-arrow {
+    position: absolute;
+    top: 50%;
+    right: -28px;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .obj-arrow svg {
+    width: 12px;
+    height: 12px;
+    stroke: var(--muted);
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .obj-badge {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+  }
+
+  .obj-titre {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .obj-text {
+    font-size: 13px;
+    line-height: 1.75;
+    color: #3a3a3a;
+  }
+
+  .obj-conclusion {
+    margin-top: 2rem;
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 1.2rem 1.6rem;
+  }
+
+  .obj-conclusion p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #1a1a1a;
+    font-style: italic;
+  }
+
+  @media (max-width: 850px) {
+    .obj-roadmap {
+      grid-template-columns: 1fr;
+    }
+
+    .obj-arrow {
+      display: none;
+    }
+  }
+
+  /* BILAN PERSONNEL */
+  .bilan-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .bilan-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.8rem 2rem;
+  }
+
+  .bilan-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bilan-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .bilan-card.fierte .bilan-icon {
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+
+  .bilan-card.axe .bilan-icon {
+    background: #FAEEDA;
+    color: #BA7517;
+  }
+
+  .bilan-card.decouverte .bilan-icon {
+    background: #E6F1FB;
+    color: #185FA5;
+  }
+
+  .bilan-content {
+    flex: 1;
+  }
+
+  .bilan-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.35rem;
+  }
+
+  .bilan-card.fierte .bilan-label { color: var(--accent); }
+  .bilan-card.axe .bilan-label { color: #BA7517; }
+  .bilan-card.decouverte .bilan-label { color: #185FA5; }
+
+  .bilan-titre {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+  }
+
+  .bilan-text {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #3a3a3a;
+  }
+
+  .bilan-outro {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 2rem;
+    background: var(--navy);
+    border-radius: 14px;
+  }
+
+  .bilan-outro p {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #fff;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 700px) {
+    .bilan-card {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">SE</span>
+  <ul class="nav-links">
+    <li><a href="#accueil">Qui suis-je ?</a></li>
+    <li><a href="#parcours">Parcours</a></li>
+    <li><a href="#experiences">Expériences</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#objectifs">Objectifs</a></li>
+    <li><a href="#bilan">Bilan</a></li>
+  </ul>
+</nav>
+
+<section id="accueil">
+
+  <div class="left-col">
+    <div class="photo-wrapper">
+      <img src="SOSO.png" alt="Sofiane ELFARH">
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-title">Contact</div>
+
+      <div class="contact-row">
+        <span class="icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </span>
+        <a href="mailto:elfarhsofiane0@gmail.com">elfarhsofiane0@gmail.com</a>
+      </div>
+
+      <div class="contact-row">
+        <span class="icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </span>
+        <a href="tel:0665504830">06 65 50 48 30</a>
+      </div>
+
+      <div class="contact-row">
+        <span class="icon">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </span>
+        <a href="https://linkedin.com/in/sofiane-el-farh" target="_blank">SOFIANE ELFARH</a>
+      </div>
+
+      <a href="CV EL FARH SOFIANE .pdf" target="_blank" class="cv-btn">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Voir mon CV
+      </a>
+      <div class="formation-bloc">
+        <div class="formation-titre">Formations</div>
+
+        <div class="formation-item">
+          <button class="formation-btn" onclick="toggleFormation(this)">
+            <div>
+              <span class="formation-nom">Baccalauréat général</span>
+              <span class="formation-periode">Lycée René Cassin · 2020–2023</span>
+            </div>
+            <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="formation-detail">
+            <p>J'ai obtenu un baccalauréat général au Lycée René Cassin avec les spécialités Mathématiques, NSI et Physique-Chimie. Ce parcours m'a permis de développer des compétences en logique, en analyse et en programmation. La spécialité NSI m'a notamment fait découvrir les bases de l'informatique, des algorithmes et des bases de données, ce qui a renforcé mon intérêt pour le domaine de la data. Cette combinaison de matières scientifiques a naturellement orienté mon projet d'études vers l'analyse et l'exploitation des données.</p>
+          </div>
+        </div>
+
+        <div class="formation-item">
+          <button class="formation-btn" onclick="toggleFormation(this)">
+            <div>
+              <span class="formation-nom">BUT Science des Données</span>
+              <span class="formation-periode">IUT de Villetaneuse · 2023–2026</span>
+            </div>
+            <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="formation-detail">
+            <p>J'ai intégré le BUT Science des Données à l'IUT de Villetaneuse. Cette formation professionnalisante de trois ans permet d'acquérir des compétences en statistique, programmation, gestion de bases de données et visualisation des données. Elle se distingue également par les SAÉ (Situations d'Apprentissage et d'Évaluation), des projets réalisés en groupe qui nous placent dans des situations proches de celles rencontrées en entreprise.</p>
+            <p>À partir de la deuxième année, j'ai rejoint PRO BTP en tant que Data Analyst en alternance, ce qui me permet d'appliquer concrètement les connaissances acquises en cours.</p>
+          </div>
+        </div>
+
+        <div class="formation-item">
+          <button class="formation-btn" onclick="toggleFormation(this)">
+            <div>
+              <span class="formation-nom">Cycle Ingénieur Big Data & ML</span>
+              <span class="formation-periode">EFREI Paris · 2026–2029</span>
+            </div>
+            <svg class="chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="formation-detail">
+            <p>À partir de septembre 2026, je poursuivrai mon parcours à l'EFREI Paris en intégrant le cycle ingénieur Big Data & Machine Learning. Cette formation de trois ans permet d'approfondir des domaines tels que la Data Science, l'intelligence artificielle, le machine learning et les technologies Big Data.</p>
+            <p>Je réaliserai cette formation en alternance au Crédit Agricole, où j'occuperai le poste de Data Scientist pendant trois ans.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="right-col">
+    <span class="tag">Portfolio</span>
+    <h1 class="hero-name">Sofiane<br>ELFARH</h1>
+    <p class="hero-subtitle">Futur Analyste Sportif</p>
+    <div class="divider"></div>
+    <div class="bio">
+      <p>Je m'appelle Sofiane ELFARH, j'ai 20 ans et je suis actuellement en troisième année de BUT Science des Données à l'IUT de Villetaneuse. Je réalise cette dernière année en alternance chez PRO BTP, où j'occupe le poste de Data Analyst.</p>
+      <p>Passionné par la data et le sport, j'ai toujours été attiré par tout ce qui permet de comprendre, analyser et expliquer la performance à travers les chiffres. Au fil de mon parcours, j'ai découvert que les données jouent aujourd'hui un rôle central dans de nombreux domaines, notamment dans le sport où elles sont devenues un véritable outil d'aide à la décision.</p>
+      <p>Cette double passion a progressivement façonné mon projet professionnel. Mon ambition est de mettre mes compétences en analyse de données au service du sport en devenant, à terme, analyste sportif. Pour moi, la data ne se limite pas à des chiffres : elle permet de raconter une histoire, d'identifier des tendances et d'apporter des réponses concrètes à des problématiques réelles.</p>
+      <p>Mon parcours en BUT Science des Données ainsi que mon expérience en alternance chez PRO BTP m'ont permis de développer des compétences techniques en analyse de données, statistiques, programmation et visualisation, tout en découvrant les exigences du monde professionnel.</p>
+      <p>À partir de septembre 2026, je poursuivrai mon parcours à l'EFREI Paris en intégrant le cycle ingénieur Big Data & Machine Learning. Cette formation sera réalisée en alternance au Crédit Agricole, où j'occuperai le poste de Data Scientist pendant trois ans.</p>
+    </div>
+  </div>
+
+</section>
+
+<section id="parcours">
+  <div class="section-label">Mon chemin</div>
+  <h2 class="section-title">Parcours</h2>
+
+  <div class="frise-wrapper">
+
+    <!-- ÉTAPE 1 : BAC -->
+    <div class="frise-etape">
+      <div class="frise-annee-bloc">
+        <span class="frise-annee">2023</span>
+      </div>
+      <div class="frise-ligne-col">
+        <div class="frise-dot"></div>
+        <div class="frise-trait"></div>
+      </div>
+      <div class="frise-card">
+        <div class="frise-badge">Baccalauréat Général</div>
+        <div class="frise-card-titre">Lycée René Cassin</div>
+        <div class="frise-card-periode">Obtention 2023</div>
+        <div class="frise-tags">
+          <span class="ftag">Mathématiques</span>
+          <span class="ftag">NSI</span>
+          <span class="ftag">Physique-Chimie</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ÉTAPE 2 : BUT -->
+    <div class="frise-etape">
+      <div class="frise-annee-bloc">
+        <span class="frise-annee">2023 – 2026</span>
+      </div>
+      <div class="frise-ligne-col">
+        <div class="frise-dot accent"></div>
+        <div class="frise-trait"></div>
+      </div>
+      <div class="frise-card highlight">
+        <div class="frise-badge accent">BUT Science des Données</div>
+        <div class="frise-card-titre">IUT de Villetaneuse</div>
+        <div class="frise-card-periode">2023 → 2026 · Alternance</div>
+        <div class="frise-alternance">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+          Data Analyst · <strong>PRO BTP</strong>
+        </div>
+        <div class="frise-tags">
+          <span class="ftag">Statistiques</span>
+          <span class="ftag">Python</span>
+          <span class="ftag">SQL</span>
+          <span class="ftag">Visualisation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ÉTAPE 3 : EFREI -->
+    <div class="frise-etape last">
+      <div class="frise-annee-bloc">
+        <span class="frise-annee">2026 – 2029</span>
+      </div>
+      <div class="frise-ligne-col">
+        <div class="frise-dot navy"></div>
+        <div class="frise-trait hidden"></div>
+      </div>
+      <div class="frise-card navy-card">
+        <div class="frise-badge navy">Cycle Ingénieur</div>
+        <div class="frise-card-titre">EFREI Paris · Big Data & Machine Learning</div>
+        <div class="frise-card-periode">2026 → 2029 · Alternance</div>
+        <div class="frise-alternance dark">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+          Data Scientist · <strong>Crédit Agricole</strong>
+        </div>
+        <div class="frise-tags">
+          <span class="ftag dark">Machine Learning</span>
+          <span class="ftag dark">Big Data</span>
+          <span class="ftag dark">IA</span>
+          <span class="ftag dark">Data Science</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="experiences">
+  <div class="section-label">Mon parcours professionnel</div>
+  <h2 class="section-title">Expériences professionnelles</h2>
+
+  <div class="frise-wrapper">
+
+    <!-- EXPÉRIENCE 1 : PRO BTP -->
+    <div class="frise-etape">
+      <div class="frise-annee-bloc">
+        <span class="frise-annee">2024 – 2026</span>
+      </div>
+      <div class="frise-ligne-col">
+        <div class="frise-dot accent"></div>
+        <div class="frise-trait"></div>
+      </div>
+      <div class="frise-card highlight">
+        <div class="frise-badge accent">Alternance · En cours</div>
+        <div class="frise-card-titre">Data Analyst – PRO BTP</div>
+        <div class="frise-card-periode">Septembre 2024 – Septembre 2026</div>
+        <div class="frise-card-desc">
+          <p>PRO BTP est le groupe de protection sociale de référence du secteur du bâtiment et des travaux publics. Il accompagne ses adhérents à travers différentes activités telles que la retraite, la prévoyance, la santé, l'épargne ou encore l'action sociale. Avec plusieurs millions de bénéficiaires, le groupe s'appuie sur la donnée pour piloter son activité et améliorer ses performances.</p>
+          <p>J'ai intégré PRO BTP en tant que Data Analyst au sein du service SAPC (Structure d'Animation et de Pilotage Commercial), dont la mission est d'accompagner les équipes commerciales dans le suivi et l'amélioration de leurs performances. Au sein d'une équipe data, je participe à la création d'études, d'analyses, d'indicateurs et de tableaux de bord permettant d'aider les métiers dans leur prise de décision.</p>
+          <p>Mon travail consiste à exploiter les données commerciales afin d'identifier des leviers d'amélioration et contribuer à l'optimisation de la performance commerciale du groupe. Cette expérience m'a permis de développer mes compétences en analyse de données, reporting, visualisation et communication avec les équipes métiers, tout en apprenant à transformer des besoins opérationnels en solutions concrètes basées sur la donnée.</p>
+        </div>
+        <div class="frise-tags">
+          <span class="ftag">Reporting</span>
+          <span class="ftag">Power BI</span>
+          <span class="ftag">SQL</span>
+          <span class="ftag">Analyse commerciale</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPÉRIENCE 2 : CRÉDIT AGRICOLE CIB -->
+    <div class="frise-etape last">
+      <div class="frise-annee-bloc">
+        <span class="frise-annee">2026 – 2029</span>
+      </div>
+      <div class="frise-ligne-col">
+        <div class="frise-dot navy"></div>
+        <div class="frise-trait hidden"></div>
+      </div>
+      <div class="frise-card navy-card">
+        <div class="frise-badge navy">Alternance · À venir</div>
+        <div class="frise-card-titre">Data Scientist – Crédit Agricole CIB</div>
+        <div class="frise-card-periode">Septembre 2026 – Septembre 2029</div>
+        <div class="frise-card-desc">
+          <p>Le Crédit Agricole CIB est la banque de financement et d'investissement du groupe Crédit Agricole, présente dans de nombreux pays et spécialisée dans l'accompagnement des grandes entreprises et institutions.</p>
+          <p>À partir de septembre 2026, j'intégrerai une équipe composée notamment de designers et d'architectes afin d'exploiter les données liées à l'occupation des espaces de travail. L'objectif sera d'analyser ces données pour optimiser l'utilisation des espaces et améliorer l'expérience des collaborateurs.</p>
+          <p>Cette expérience me permettra d'approfondir mes compétences en Data Science, en analyse avancée de données et en machine learning, tout en découvrant de nouvelles problématiques dans un environnement international.</p>
+        </div>
+        <div class="frise-tags">
+          <span class="ftag dark">Data Science</span>
+          <span class="ftag dark">Machine Learning</span>
+          <span class="ftag dark">IA</span>
+          <span class="ftag dark">International</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="projets">
+  <div class="section-label">Mes réalisations</div>
+  <h2 class="section-title">Projets</h2>
+
+  <div class="carousel-wrapper">
+
+    <button class="carousel-arrow left" onclick="moveCarousel(-1)">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-inner" id="carouselInner">
+
+      <div class="carousel-item" data-index="0">
+        <div class="projet-img-wrapper">
+          <img src="MUSICAAA.PNG" alt="Image du projet 1">
+        </div>
+        <div class="projet-info">
+          <h3 class="projet-titre">Enquête sur les différentes pratiques d'écoute de la musique</h3>
+          <p class="projet-clic">Cliquer pour en savoir plus</p>
+          <div class="projet-desc">
+            <!-- INSÈRE TON TEXTE ICI -->
+            <p>Dans ce projet, j'ai travaillé sur la mise en œuvre d'une enquête visant à comprendre les pratiques d'écoute de la musique. Ce projet de groupe m'a permis de réaliser des visualisations et des sondages pour tirer des conclusions pertinentes à l'aide d'Excel et Sphinx. Le projet impliquait la création d'un questionnaire que nous avons nous-mêmes élaboré, lequel a été répondu par plus de 1000 participants.
+
+Mon rôle dans ce projet était de trouver des corrélations entre différentes variables et de présenter ces corrélations sous forme de graphiques. Par exemple, j'ai analysé les relations entre le budget alloué à la musique et la classe socio-professionnelle des individus, ainsi que d'autres variables telles que le salaire. Pour chaque analyse, j'ai créé des visualisations claires et impactantes, permettant de mieux comprendre les données.
+
+Grâce à Excel, j'ai pu effectuer des analyses approfondies et créer des graphiques détaillés. Sphinx m'a aidé à structurer et analyser les données du questionnaire de manière efficace. J'ai présenté mes résultats sous forme de graphiques, facilitant ainsi la compréhension des tendances et des corrélations par l'audience.
+
+Enfin, j'ai réalisé une soutenance pour présenter nos conclusions. Cette présentation a permis de valoriser notre travail et de démontrer l'importance des données recueillies et analysées. Ce projet m'a non seulement permis de développer mes compétences en analyse de données et en visualisation, mais aussi de renforcer ma capacité à travailler en équipe et à communiquer des résultats complexes de manière accessible et convaincante.</p>
+            <!-- INSÈRE TON PDF ICI -->
+            <a href="ENQUETE MUSIQUE.pdf" target="_blank" class="projet-pdf">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Voir le PDF du projet
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-index="1">
+        <div class="projet-img-wrapper">
+          <img src="LOGEMENTOO.PNG" alt="Image du projet 2">
+        </div>
+        <div class="projet-info">
+          <h3 class="projet-titre">Analyse - Implantation logements sociaux</h3>
+          <p class="projet-clic">Cliquer pour en savoir plus</p>
+          <div class="projet-desc">
+            <p>Dans ce projet, on a travaillé à partir de données ouvertes du gouvernement afin d’étudier différents facteurs comme le revenu, la catégorie socio-professionnelle ou encore la composition des foyers. L’objectif était d’identifier les zones les plus pertinentes pour implanter de futurs logements sociaux en France. On a utilisé Excel pour le traitement et l’analyse des données, puis Tableau pour la visualisation. Ce projet m’a permis de mieux comprendre l’analyse de données socio-économiques et de développer mes compétences en nettoyage de données, analyse exploratoire et visualisation.</p>
+            <!-- INSÈRE TON PDF ICI -->
+            <a href="SAE 206.pdf" target="_blank" class="projet-pdf">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Voir le PDF du projet
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-index="2">
+        <div class="projet-img-wrapper">
+          <img src="EPICOOO.PNG" alt="Image du projet 3">
+        </div>
+        <div class="projet-info">
+          <h3 class="projet-titre">TEST ET AUTOMATISATION SUR EPIC GAMES</h3>
+          <p class="projet-clic">Cliquer pour en savoir plus</p>
+          <div class="projet-desc">
+            <p>On a réalisé une phase de test sur le site Epic Games afin d’évaluer la qualité globale de la plateforme. On a analysé l’expérience utilisateur, la navigation, les performances du site ainsi que son comportement sur différents navigateurs et supports. On a aussi cherché à détecter d’éventuels bugs ou problèmes d’ergonomie et proposé des améliorations. Ce projet m’a permis de développer une approche plus critique sur les interfaces web et de mieux comprendre les enjeux liés à l’UX et aux tests fonctionnels.</p>
+            <!-- INSÈRE TON PDF ICI -->
+            <a href="SAE TEST.pdf" target="_blank" class="projet-pdf">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Voir le PDF du projet
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-index="3">
+        <div class="projet-img-wrapper">
+          <img src="VISTA.png" alt="Image du projet 4">
+        </div>
+        <div class="projet-info">
+          <h3 class="projet-titre">Création de l'entreprise idéale</h3>
+          <p class="projet-clic">Cliquer pour en savoir plus</p>
+          <div class="projet-desc">
+            <p>Dans le cadre d’un travail de groupe, on a imaginé notre entreprise idéale autour de notre passion commune pour le football. On est parti de nos expériences en alternance pour construire un projet réaliste, en réfléchissant à l’organisation interne, à la culture d’entreprise, aux engagements RSE et à la cible. On a aussi beaucoup insisté sur l’équilibre entre vie professionnelle et vie personnelle. Ce projet m’a permis de développer ma capacité à structurer une idée de projet, à travailler en équipe et à réfléchir à des enjeux d’organisation et de management.</p>
+            <!-- INSÈRE TON PDF ICI -->
+            <a href="SAE LA VISTA.pdf" target="_blank" class="projet-pdf">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Voir le PDF du projet
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-index="4">
+        <div class="projet-img-wrapper">
+          <img src="DIABETOO.png" alt="Image du projet 5">
+        </div>
+        <div class="projet-info">
+          <h3 class="projet-titre">Étude prédictive sur l'hypertension</h3>
+          <p class="projet-clic">Cliquer pour en savoir plus</p>
+          <div class="projet-desc">
+            <p>Dans le cadre de ma formation, j’ai réalisé un projet de data mining portant sur une base de données de patients. Cette base comportait des informations telles que l’activité physique, le statut de fumeur, les antécédents familiaux, le sommeil, et bien sûr si la personne souffrait ou non d’hypertension.
+L’objectif principal du projet était de comprendre si certaines caractéristiques pouvaient influencer la présence d’hypertension. Pour cela, j’ai exploré les données afin d’identifier des tendances et des relations entre les différentes variables et le risque d’hypertension.
+Ensuite, nous avons utilisé des techniques de prédiction pour estimer si une personne souffrait d’hypertension à partir de ses informations personnelles. Nous avons testé plusieurs modèles, tels que Random Forest, K-Nearest Neighbors et la régression logistique. Cela m’a permis de comparer leurs performances et de comprendre comment les algorithmes apprennent à partir des données pour faire des prédictions fiables.
+Ce projet m’a permis de mettre en pratique mes compétences en nettoyage de données, en analyse statistique et en modélisation prédictive, tout en vulgarisant les résultats pour les rendre compréhensibles même pour un public non technique.
+</p>
+            <!-- INSÈRE TON PDF ICI -->
+            <a href="SAÉ 5.03 Data Mining Dramane-Sofiane_EDA.pdf" target="_blank" class="projet-pdf">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Voir le PDF du projet
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-index="5">
+        <div class="projet-img-wrapper">
+          <img src="CRIME.PNG" alt="Image du projet 6">
+        </div>
+        <div class="projet-info">
+          <h3 class="projet-titre">Analyse des crimes en Inde (Mathematica)</h3>
+          <p class="projet-clic">Cliquer pour en savoir plus</p>
+          <div class="projet-desc">
+            <p>Ce projet m’a vraiment permis de mettre en pratique plusieurs compétences clés de la formation. À partir d’une base de données publique sur les crimes en Inde, j’ai construit un tableau de bord interactif pour analyser les données et répondre à une problématique : qui sont les principales victimes ?
+J’ai utilisé Mathematica, un langage que je ne connaissais pas du tout au début. Ce n’est pas un outil standard en data science, mais j’ai trouvé intéressant d’apprendre à l’utiliser, surtout pour la visualisation de données dynamiques.
+Ce projet m’a beaucoup apporté sur le plan technique : j’ai appris à récupérer et nettoyer des données, à structurer mon raisonnement, et surtout à présenter mes résultats de façon claire et visuelle. C’est là que j’ai compris l’importance de rendre les données compréhensibles, même pour un public non-expert.
+Il m’a aussi poussé à mieux m’organiser, à travailler en autonomie, et à aller chercher des solutions par moi-même.</p>
+            <!-- INSÈRE TON PDF ICI -->
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-index="6">
+        <div class="projet-img-wrapper">
+          <img src="Amazon-Logo.png" alt="Image du projet 7">
+        </div>
+        <div class="projet-info">
+          <h3 class="projet-titre">Analyse prédictive sur les avis Amazon </h3>
+          <p class="projet-clic">Cliquer pour en savoir plus</p>
+          <div class="projet-desc">
+            <p>Ce projet consistait à développer des modèles de machine learning en Python afin de prédire des avis clients sur Amazon à partir de différentes informations comme le nombre d’étoiles ou les données textuelles des commentaires. On a testé plusieurs modèles pour comparer leurs performances et améliorer la précision des prédictions. J’ai surtout travaillé sur la préparation des données, la création de variables, l’entraînement des modèles et leur évaluation. Ce projet m’a permis de renforcer mes compétences en Python, en machine learning et en analyse de données.</p>
+            <!-- INSÈRE TON PDF ICI -->
+  
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-index="7">
+        <div class="projet-img-wrapper">
+          <img src="PROBTPP.png" alt="Image du projet 8">
+        </div>
+        <div class="projet-info">
+          <h3 class="projet-titre">Conception d'un tableau de bord pour les équipements du CRM</h3>
+          <p class="projet-clic">Cliquer pour en savoir plus</p>
+          <div class="projet-desc">
+            <p>Le CRM, Customer Relationship Management, est un outil technique qui permet aux entreprises de gérer leurs relations avec les clients. Il existe diverses solutions CRM sur le marché. Il permet d’établir une stratégie de gestion des relations et interactions avec tous les clients. Dans mon entreprise, nous utilisons cela pour le marché entreprise, et COMET pour le marché des particuliers. COMET est un portail des collaborateurs PRO BTP, qui utilise les données du CRM. J’ai eu une mission en relation avec COMET, et donc le marché des particuliers. L’objectif était d’ajouter un nouvel onglet au tableau de bord du CRM pour avoir une vue sur les équipements.
+
+Voici ci-dessus la page ajoutée au rapport. Elle permet d’avoir une vue en détail sur les équipements (ce qu’on vend au client) en nombre d’entreprises et en nombre de produits. Tous les filtres sur le côté permettent d'affiner encore plus la recherche en fonction du besoin.
+Exemple d’utilisation : un collaborateur veut voir combien de produits il a vendu, s’ils ont été résiliés, détenus, etc. Quelle famille de produits est la plus vendue ? A quel type d'entreprises il a le plus vendu d’équipements ?
+Cette mission m’a permis de travailler en collaboration avec d’autres équipes que la mienne. Cela m’a donc permis de renforcer la communication et les travaux en groupe, et ainsi travailler dans des projets de plus grande envergure.</p>
+            <!-- INSÈRE TON PDF ICI -->
+            
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <button class="carousel-arrow right" onclick="moveCarousel(1)">
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+
+  </div>
+
+  <div class="carousel-dots" id="carouselDots"></div>
+
+</section>
+
+<section id="competences">
+  <div class="section-label">Mes outils</div>
+  <h2 class="section-title">Compétences</h2>
+  <p class="section-intro">Quatre axes structurent ma formation en Science des Données</p>
+
+  <div class="comp-grid">
+
+    <div class="comp-card">
+      <div class="comp-header traiter">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="4" cy="7" r="1.5" fill="currentColor"/><circle cx="4" cy="12" r="1.5" fill="currentColor"/><circle cx="4" cy="17" r="1.5" fill="currentColor"/></svg>
+        </div>
+        <span class="comp-titre">Traiter</span>
+      </div>
+      <div class="comp-bulles">
+        <span class="bulle">Collecter & structurer des données</span>
+        <span class="bulle">Nettoyer & préparer des jeux de données</span>
+        <span class="bulle">Manipuler des BDD (SQL)</span>
+        <span class="bulle">Gérer des volumes variés</span>
+        <span class="bulle">Automatiser des traitements</span>
+      </div>
+    </div>
+
+    <div class="comp-card">
+      <div class="comp-header analyser">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <span class="comp-titre">Analyser</span>
+      </div>
+      <div class="comp-bulles">
+        <span class="bulle">Interpréter des données métiers</span>
+        <span class="bulle">Réaliser des analyses statistiques</span>
+        <span class="bulle">Identifier tendances & anomalies</span>
+        <span class="bulle">Comprendre les besoins métiers</span>
+        <span class="bulle">Extraire des insights pertinents</span>
+      </div>
+    </div>
+
+    <div class="comp-card">
+      <div class="comp-header valoriser">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <span class="comp-titre">Valoriser</span>
+      </div>
+      <div class="comp-bulles">
+        <span class="bulle">Tableaux de bord (Power BI)</span>
+        <span class="bulle">Synthétiser pour les métiers</span>
+        <span class="bulle">Visualiser clairement les données</span>
+        <span class="bulle">Communiquer à des non-techniques</span>
+        <span class="bulle">Aider à la prise de décision</span>
+      </div>
+    </div>
+
+    <div class="comp-card">
+      <div class="comp-header modeliser">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+        </div>
+        <span class="comp-titre">Modéliser</span>
+      </div>
+      <div class="comp-bulles">
+        <span class="bulle">Développer des modèles statistiques</span>
+        <span class="bulle">Bases du machine learning</span>
+        <span class="bulle">Tester & comparer des modèles</span>
+        <span class="bulle">Optimiser les performances</span>
+        <span class="bulle">Méthodes de prédiction</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="objectifs">
+  <div class="section-label">Ma vision</div>
+  <h2 class="section-title">Objectifs</h2>
+  <p class="section-intro">Plutôt que de voir ma carrière comme une succession de postes à occuper, je la vois comme une progression continue autour d'un même objectif : utiliser la donnée pour comprendre, expliquer et améliorer la performance.</p>
+
+  <div class="obj-roadmap">
+
+    <div class="obj-card">
+      <div class="obj-node">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+      </div>
+      <span class="obj-arrow">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </span>
+      <div class="obj-badge">Court terme</div>
+      <h3 class="obj-titre">Consolider &amp; intégrer</h3>
+      <p class="obj-text">Mon objectif est de consolider les compétences acquises lors de mon BUT Science des Données et de réussir mon intégration à l'EFREI ainsi qu'au Crédit Agricole en tant que Data Scientist. Je souhaite approfondir mes connaissances en machine learning, en ingénierie des données et en intelligence artificielle tout en développant une expérience professionnelle solide grâce à l'alternance.</p>
+    </div>
+
+    <div class="obj-card moyen">
+      <div class="obj-node">
+        <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      </div>
+      <span class="obj-arrow">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </span>
+      <div class="obj-badge">Moyen terme</div>
+      <h3 class="obj-titre">Construire une expertise</h3>
+      <p class="obj-text">Au cours des prochaines années, je souhaite devenir un professionnel reconnu dans le domaine de la data en participant à des projets à forte valeur ajoutée. Mon objectif est de développer une expertise complète allant de la collecte et du traitement des données jusqu'à la construction de modèles d'analyse et d'aide à la décision. Je souhaite également continuer à réaliser des projets personnels liés au sport afin de renforcer progressivement mon profil d'analyste sportif.</p>
+    </div>
+
+    <div class="obj-card long">
+      <div class="obj-node">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+      </div>
+      <div class="obj-badge">Long terme</div>
+      <h3 class="obj-titre">Allier data &amp; sport</h3>
+      <p class="obj-text">Mon ambition est d'allier mes deux passions : la data et le sport. Je souhaite évoluer vers un poste d'analyste sportif au sein d'un club professionnel, d'une fédération ou d'une organisation sportive. Mon objectif est de contribuer à la prise de décision grâce aux données, que ce soit dans l'analyse des performances, le recrutement, la préparation des compétitions ou le suivi des joueurs.</p>
+    </div>
+
+  </div>
+
+  <div class="obj-conclusion">
+    <p>Dans un environnement où la donnée occupe une place de plus en plus importante, je souhaite faire partie de ceux qui transforment les chiffres en avantage compétitif. C'est cette vision qui guide aujourd'hui mon parcours académique, professionnel et personnel.</p>
+  </div>
+</section>
+
+<section id="bilan">
+  <div class="section-label">Un regard sur mon parcours</div>
+  <h2 class="section-title">Bilan personnel</h2>
+  <p class="section-intro">L'alternance n'est pas seulement une expérience professionnelle : c'est aussi une période de remise en question, de progression et de découverte de soi. Voici un regard honnête sur ce qu'elle m'a apporté.</p>
+
+  <div class="bilan-grid">
+
+    <div class="bilan-card fierte">
+      <div class="bilan-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+      </div>
+      <div class="bilan-content">
+        <div class="bilan-label">Ce dont je suis le plus fier</div>
+        <h3 class="bilan-titre">Ma première expérience professionnelle</h3>
+        <p class="bilan-text">Ce dont je suis le plus fier, c'est d'avoir eu ma première véritable expérience professionnelle chez Pro BTP en alternance. Cette opportunité m'a permis de découvrir le monde de l'entreprise dans un cadre concret, avec de vraies responsabilités et des attentes réelles. J'ai dû rapidement m'adapter à un nouvel environnement, comprendre les méthodes de travail et m'intégrer dans une équipe déjà en place. Avec le temps, j'ai gagné en autonomie et en confiance, ce qui m'a permis de devenir plus à l'aise dans mes missions. Cette capacité d'adaptation et cette progression tout au long de l'alternance représentent pour moi une vraie fierté.</p>
+      </div>
+    </div>
+
+    <div class="bilan-card axe">
+      <div class="bilan-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 20v-6M12 14l-4-2M12 14l4-2M12 8V4M12 8L8 6M12 8l4-2"/><circle cx="12" cy="20" r="2"/></svg>
+      </div>
+      <div class="bilan-content">
+        <div class="bilan-label">Ce dont je suis le moins fier</div>
+        <h3 class="bilan-titre">Des débuts marqués par le doute</h3>
+        <p class="bilan-text">Ce dont je suis le moins fier, c'est que j'ai parfois manqué de confiance au début de certaines missions, ce qui m'a poussé à hésiter ou à prendre plus de temps pour réaliser certaines tâches. J'ai aussi pu rencontrer des difficultés sur l'organisation au départ, notamment dans la gestion des priorités entre l'école et l'entreprise. Cependant, ces difficultés m'ont permis de progresser et de m'améliorer au fil du temps. Avec du recul, je vois ces moments comme des étapes normales d'apprentissage plutôt que comme des échecs.</p>
+      </div>
+    </div>
+
+    <div class="bilan-card decouverte">
+      <div class="bilan-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12.7V17h8v-2.3A7 7 0 0012 2z"/></svg>
+      </div>
+      <div class="bilan-content">
+        <div class="bilan-label">Ce que j'ai découvert sur moi-même</div>
+        <h3 class="bilan-titre">Apprendre par la pratique et l'échange</h3>
+        <p class="bilan-text">Grâce à l'alternance, j'ai découvert que j'étais capable de m'adapter plus rapidement que je ne le pensais à un environnement professionnel. J'ai aussi compris que j'apprenais mieux en étant confronté à des situations concrètes plutôt que seulement théoriques. J'ai développé une meilleure organisation dans mon travail et une capacité à gérer plusieurs tâches en même temps. Cette expérience m'a aussi montré que j'aimais travailler en équipe et échanger avec différents profils, ce qui m'a aidé à progresser aussi bien techniquement que humainement.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bilan-outro">
+    <p>L'alternance m'a fait grandir autant professionnellement qu'humainement.</p>
+  </div>
+</section>
+
+<script>
+  function toggleFormation(btn) {
+    const detail = btn.nextElementSibling;
+    const isOpen = detail.classList.contains('visible');
+    document.querySelectorAll('.formation-detail').forEach(d => d.classList.remove('visible'));
+    document.querySelectorAll('.formation-btn').forEach(b => b.classList.remove('open'));
+    if (!isOpen) {
+      detail.classList.add('visible');
+      btn.classList.add('open');
+    }
+  }
+
+  // CAROUSEL
+  const items = document.querySelectorAll('.carousel-item');
+  const dotsContainer = document.getElementById('carouselDots');
+  const carouselTrack = document.getElementById('carouselTrack');
+  const carouselInner = document.getElementById('carouselInner');
+  let current = 0;
+
+  items.forEach((item, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'cdot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goTo(i);
+    dotsContainer.appendChild(dot);
+
+    item.addEventListener('click', () => {
+      if (item.classList.contains('active')) {
+        item.classList.toggle('open');
+      } else {
+        goTo(i);
+      }
+    });
+  });
+
+  function updateCarousel() {
+    const dots = document.querySelectorAll('.cdot');
+    items.forEach((item, i) => {
+      item.classList.remove('active', 'side');
+      if (i === current) item.classList.add('active');
+      else if (i === current - 1 || i === current + 1) item.classList.add('side');
+    });
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    slideToCurrent();
+  }
+
+  function slideToCurrent() {
+    const activeItem = items[current];
+    const itemWidth = activeItem.offsetWidth;
+    const trackWidth = carouselTrack.offsetWidth;
+    const offset = activeItem.offsetLeft;
+    const translateX = (trackWidth - itemWidth) / 2 - offset;
+    carouselInner.style.transform = `translateX(${translateX}px)`;
+  }
+
+  function goTo(index) {
+    items[current].classList.remove('open');
+    current = Math.max(0, Math.min(index, items.length - 1));
+    updateCarousel();
+  }
+
+  function moveCarousel(dir) { goTo(current + dir); }
+
+  window.addEventListener('resize', slideToCurrent);
+
+  updateCarousel();
+</script>
+</body>
+</html>
